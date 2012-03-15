@@ -10,6 +10,7 @@ class postgresql {
     Ubuntu: {
       case $lsbdistcodename {
         lucid :  { include postgresql::debian::v8-4 }
+        oneiric : { include postgresql::debian::v9-1 }
         default: { fail "postgresql not available for ${operatingsystem}/${lsbdistcodename}"}
       }
     }
